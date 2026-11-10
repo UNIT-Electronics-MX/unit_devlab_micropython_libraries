@@ -23,6 +23,7 @@ This is a **collection repository** that compiles and organizes MicroPython libr
 | VCNL4040 | Proximity and ambient light (Vishay) | [software/vcnl4040/](software/vcnl4040/) | [vcnl4040.py](software/vcnl4040/vcnl4040.py) | [example.py](software/vcnl4040/example.py) |
 | SSD1306 | OLED display (I2C / SPI) | [software/ssd1306/](software/ssd1306/) | [ssd1306.py](software/ssd1306/ssd1306.py) | [example.py](software/ssd1306/example.py) |
 | SD card | SD card over SPI | [software/sdcard/](software/sdcard/) | [sdcard.py](software/sdcard/sdcard.py) | [example.py](software/sdcard/example.py) |
+| ST7735 | 80x160 TFT display (SPI) | [software/st7735/](software/st7735/) | [st7735.py](software/st7735/st7735.py) | [example.py](software/st7735/example.py) |
 
 Each folder has a `README.md` with the connection, installation and usage details.
 
@@ -33,11 +34,11 @@ Each library folder follows the same layout:
 ```
 software/<library>/
 ├── <library>.py   # the driver: the only file you need on the board
-├── example.py     # minimal example, runs on the board's internal I2C bus
+├── example.py     # minimal example with the board pins configured at the top
 └── README.md      # connection, installation and API summary
 ```
 
-Some folders include an extra example (for instance `bmi270_simpletest.py`). The pins are set at the top of each `example.py`: the onboard sensors (MMC5603, MAX17048, FHT40, LPS22HB, VCNL4040) use GPIO2 / GPIO3, while the BMI270 and SSD1306 examples use GPIO6 / GPIO7.
+Some folders include an extra example (for instance `bmi270_simpletest.py`). The pins are set at the top of each `example.py`: the onboard sensors (MMC5603, MAX17048, FHT40, LPS22HB, VCNL4040) use GPIO2 / GPIO3, while the BMI270 and SSD1306 examples use GPIO6 / GPIO7. The ST7735 SPI example uses GPIO2 / GPIO3 for MOSI / SCK and GPIO1 / GPIO4 / GPIO5 for CS / DC / RES.
 
 ## Installation
 
