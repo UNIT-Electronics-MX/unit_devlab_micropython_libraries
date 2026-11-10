@@ -1,3 +1,7 @@
+# Library: bmi270.py
+# Description: Original example for the Infineon PSOC6 AI Eval Kit. Prints acceleration and gyroscope readings continuously. Uses the PSOC6 I2C pins P0_2/P0_3.
+# Suggested file name on the board: main.py (only on the PSOC6 board)
+
 # SPDX-FileCopyrightText: Copyright (c) 2023 Jose D. Montoya
 #
 # SPDX-License-Identifier: MIT

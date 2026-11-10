@@ -1,3 +1,7 @@
+# Library: sdcard.py
+# Description: Mounts an SD card over SPI on /sd and lists its files. Uses SPI1 with SCK=GPIO6, MOSI=GPIO7, MISO=GPIO2 and CS=GPIO19.
+# Suggested file name on the board: main.py
+
 import machine
 import os
 from sdcard import SDCard

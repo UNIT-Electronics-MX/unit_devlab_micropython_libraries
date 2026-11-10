@@ -1,3 +1,7 @@
+# Library: bmi270.py
+# Description: Reads the acceleration (m/s2) and the gyroscope (deg/s) of the BMI270 every 0.5 s. Uses SoftI2C on GPIO6/GPIO7 and address 0x69.
+# Suggested file name on the board: main.py
+
 import machine
 import time
 from bmi270 import BMI270

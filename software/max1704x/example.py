@@ -1,3 +1,7 @@
+# Library: max1704x.py
+# Description: Reads the cell voltage and the state of charge of the MAX17048 every 2 s. Uses the onboard I2C bus on GPIO2/GPIO3.
+# Suggested file name on the board: main.py
+
 import time
 from machine import I2C, Pin
 

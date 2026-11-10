@@ -1,3 +1,7 @@
+# Library: vcnl4040.py
+# Description: Reads the proximity value and the ambient light (lux) of the VCNL4040 every 0.5 s, with 640 ms integration time. Uses the onboard I2C bus on GPIO2/GPIO3.
+# Suggested file name on the board: main.py
+
 import time
 from machine import I2C, Pin
 

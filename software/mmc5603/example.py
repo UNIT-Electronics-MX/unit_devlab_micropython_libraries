@@ -1,3 +1,7 @@
+# Library: mmc5603.py
+# Description: Reads the magnetic field of the three axes at 20 Hz in continuous mode. Uses the onboard I2C bus on GPIO2/GPIO3.
+# Suggested file name on the board: main.py
+
 # Ejemplo para mmc5603.py (MMC5603, magnetometro de 3 ejes por I2C)
 # Basado en main.py del proyecto original de Roman Shevchik (goctaprog)
 # https://github.com/octaprog7/MMC5603 - Licencia MIT

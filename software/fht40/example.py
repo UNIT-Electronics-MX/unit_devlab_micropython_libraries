@@ -1,3 +1,7 @@
+# Library: fht40.py
+# Description: Reads the temperature (C) and the relative humidity (%) of the FHT40 every 2 s. Uses the onboard I2C bus on GPIO2/GPIO3.
+# Suggested file name on the board: main.py
+
 import time
 from machine import I2C, Pin
 

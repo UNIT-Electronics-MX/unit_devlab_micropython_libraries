@@ -1,3 +1,7 @@
+# Library: lps22hb.py
+# Description: Reads the pressure (hPa) and the temperature (C) of the LPS22HB every 2 s. Uses the onboard I2C bus on GPIO2/GPIO3.
+# Suggested file name on the board: main.py
+
 import time
 from machine import I2C, Pin
 
