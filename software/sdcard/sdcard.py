@@ -1,3 +1,6 @@
+# IMPORTANT: Copy this entire code to your MicroPython microcontroller.
+# Save it as a file named exactly "sdcard.py" in the root directory or lib folder.
+
 """
 MicroPython driver for SD cards using SPI bus.
 
