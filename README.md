@@ -11,6 +11,34 @@ A curated collection of useful MicroPython libraries for embedded development. T
 This is a **collection repository** that compiles and organizes MicroPython libraries from various sources. Each library retains its original authorship and license. The goal is to provide a centralized, easy-to-use resource for MicroPython developers working with common hardware components.
 
 
+## Libraries
+
+| Library | Device | Folder | Main file | Example |
+|---|---|---|---|---|
+| BMI270 | Accelerometer / gyroscope (Bosch) | [software/bmi270/](software/bmi270/) | [bmi270.py](software/bmi270/bmi270.py) | [example.py](software/bmi270/example.py) |
+| MMC5603 | 3-axis magnetometer (MEMSIC) | [software/mmc5603/](software/mmc5603/) | [mmc5603.py](software/mmc5603/mmc5603.py) | [example.py](software/mmc5603/example.py) |
+| MAX17043 / MAX17048 | LiPo fuel gauge (Maxim) | [software/max1704x/](software/max1704x/) | [max1704x.py](software/max1704x/max1704x.py) | [example.py](software/max1704x/example.py) |
+| FHT40 | Temperature and humidity | [software/fht40/](software/fht40/) | [fht40.py](software/fht40/fht40.py) | [example.py](software/fht40/example.py) |
+| LPS22HB | Pressure and temperature (STMicroelectronics) | [software/lps22hb/](software/lps22hb/) | [lps22hb.py](software/lps22hb/lps22hb.py) | [example.py](software/lps22hb/example.py) |
+| VCNL4040 | Proximity and ambient light (Vishay) | [software/vcnl4040/](software/vcnl4040/) | [vcnl4040.py](software/vcnl4040/vcnl4040.py) | [example.py](software/vcnl4040/example.py) |
+| SSD1306 | OLED display (I2C / SPI) | [software/ssd1306/](software/ssd1306/) | [ssd1306.py](software/ssd1306/ssd1306.py) | [example.py](software/ssd1306/example.py) |
+| SD card | SD card over SPI | [software/sdcard/](software/sdcard/) | [sdcard.py](software/sdcard/sdcard.py) | [example.py](software/sdcard/example.py) |
+
+Each folder has a `README.md` with the connection, installation and usage details.
+
+## Example Structure
+
+Each library folder follows the same layout:
+
+```
+software/<library>/
+├── <library>.py   # the driver: the only file you need on the board
+├── example.py     # minimal example, runs on the board's internal I2C bus
+└── README.md      # connection, installation and API summary
+```
+
+Some folders include an extra example (for instance `bmi270_simpletest.py`). The pins are set at the top of each `example.py`: the onboard sensors (MMC5603, MAX17048, FHT40, LPS22HB, VCNL4040) use GPIO2 / GPIO3, while the BMI270 and SSD1306 examples use GPIO6 / GPIO7.
+
 ## Installation
 
 Each library can be installed independently:
